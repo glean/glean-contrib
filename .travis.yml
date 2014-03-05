@@ -5,4 +5,4 @@ install:
   - go get github.com/BurntSushi/toml
   - go get github.com/BurntSushi/toml/tomlv
   - export PATH="$HOME/gopath/bin:$PATH"
-script: tomlv ./*.toml
+script: find . -name '*.toml' | xargs tomlv
